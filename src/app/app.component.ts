@@ -37,6 +37,7 @@ loadUsers(page:number){
     this.store.dispatch(UsersActions.setUsersLoadingAction({value:false}));
     this.store.dispatch(UsersActions.setUsersAction({value: res}));
   });
+ 
 }
 
 onPageSelected(page:number){

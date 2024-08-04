@@ -6,10 +6,9 @@
   <div class="users-list">
     @if ((usersState$ | async)?.isLoading) {
       <p>Loading ...</p>
-    }@else {
-      <app-users-list [users]="(usersState$ | async)?.users" [usersPerPage]="(usersState$ | async)?.userPerPage" [totalUsers]="(usersState$ | async)?.totalUsers"
-        (onPageNumberSelected)="onPageSelected($event)"/>
     }
+  <app-users-list [users]="(usersState$ | async)?.users" [usersPerPage]="(usersState$ | async)?.userPerPage" [totalUsers]="(usersState$ | async)?.totalUsers"
+    (onPageNumberSelected)="onPageSelected($event)"/>
   </div>  
   <div class="user-details">
     <app-user-details/>
