@@ -1,0 +1,21 @@
+<div>
+    <ul>
+        @for (user of users(); track user.id) {
+            <li>
+                <div class="card">
+                    <img [src]="user.avatar" alt="Avatar" style="width:25%">
+                    <div class="container">
+                      <h4><b>{{user.first_name}} {{user.last_name}}</b></h4>
+                      <p>{{user.email}}</p>
+                    </div>
+                  </div>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="pagination">
+    @for (item of totalPagesRender(); track item) {
+        <a [class]="selectedPageNumber() === item ? 'active' : ''" (click)="onClickPageNumber(item)" href="#">{{item}}</a>
+    }
+  </div>
