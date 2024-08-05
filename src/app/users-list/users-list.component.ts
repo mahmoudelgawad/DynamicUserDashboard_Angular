@@ -57,9 +57,7 @@ ngOnChanges(changes: SimpleChanges): void {
 }
 
 onClickPageNumber(page:number){
-  console.log(this.selectedPageNumber());
  this.selectedPageNumber.set(page)
- console.log(this.selectedPageNumber());
  this.onPageNumberSelected.emit(page);
 }
 
