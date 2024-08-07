@@ -1,0 +1,13 @@
+<main>
+    <div class="header">
+      <app-header [currentPage]="currentPage"/>
+    </div>
+    <hr/>
+    <div class="users-list">
+      @if ((usersState$ | async)?.isLoading) {
+        <p>Loading ...</p>
+      }
+    <app-users-list [users]="(usersState$ | async)?.users" [usersPerPage]="(usersState$ | async)?.userPerPage" [totalUsers]="(usersState$ | async)?.totalUsers"
+      (onPageNumberSelected)="onPageSelected($event)"/>
+    </div>  
+  </main>

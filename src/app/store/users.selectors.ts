@@ -1,8 +1,9 @@
 import { createSelector } from "@ngrx/store";
 import { UsersState } from "../models/users-state.model";
+import { GlobalAppState } from "../models/global-app-state";
 
-// as the provider 'provideStore' object structure
-export const selectUsersState = (globalAppState:{usersState:UsersState}) => globalAppState.usersState;
+//map function on as the provider 'provideStore' object structure
+export const selectUsersState = (globalAppState:GlobalAppState) => globalAppState.usersState;
 
 export const isLoadingSelector = createSelector(
     selectUsersState,

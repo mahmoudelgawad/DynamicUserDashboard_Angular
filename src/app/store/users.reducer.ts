@@ -18,7 +18,7 @@ export const  initialState : UsersState = {
 
 export const usersReducer = createReducer(
     initialState,
-    on(UserActions.setUsersLoadingAction, (state, action) => {
+    on(UserActions.setUsersLoadingStatusAction, (state, action) => {
         return {...state, isLoading:action.value}
     }),
     on(UserActions.setUsersAction, (state, action) => {
@@ -29,4 +29,7 @@ export const usersReducer = createReducer(
             totalUsers : action.value.total
         }
     }),
+    on(UserActions.setFilterUsersAction, (state, action) => {
+        return {...state, users:action.value}
+    })
 );

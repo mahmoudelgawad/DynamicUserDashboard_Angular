@@ -12,16 +12,11 @@ export class UsersService {
   private usersURL:string;
 
   constructor(private http:HttpClient, private baseService : BaseService) {
-    this.usersURL = baseService.baseURL + "/users";
+    this.usersURL = "/users";
    }
 
   getUsers(page:number):Observable<ResponseObject>{
-   return this.http.get<ResponseObject>(this.usersURL+`?page=${page}`)
-   .pipe(map( res => {
-           //this.baseService.MapResponseToAppState(res);
-           //return res.data
-           return res;
-          }));
+    return this.baseService.get<ResponseObject>(this.usersURL+`?page=${page}`);
   }
 
 }

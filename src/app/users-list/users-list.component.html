@@ -11,6 +11,9 @@
                   </div>
             </li>
         }
+        @if(!users() || users()?.length === 0){
+          <p>There no Users found in current Page !...</p>   
+        }
     </ul>
 </div>
 

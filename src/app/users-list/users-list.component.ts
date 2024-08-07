@@ -29,30 +29,8 @@ constructor(){
 }
 
 ngOnInit(): void {
-  // console.log({
-  //   from:'ngOnInit',
-  //   SignaltotalPages:this.totalUsers(),
-  //   SignalusersPerPage : this.usersPerPage()
-  // });
-  
 }
 ngOnChanges(changes: SimpleChanges): void {
-  if(changes['usersPerPage'] && changes['totalUsers']){
-  //  this.totalPagesRender = [];
-  // this.totalPages.set(computed(() => this.totalUsers() / this.usersPerPage())());
-  // for(let i=0; i < this.totalPages(); i++){
-  //    this.totalPagesRender.push(i);
-  // }
-
-  // console.log({
-  //   from:'ngOnChanges',
-  //   SignaltotalUsers:this.totalUsers(),
-  //   SignalusersPerPage : this.usersPerPage(),
-  //   SignaltotalPages : this.totalPages(),
-  //   totalPagesRender : this.totalPagesRender(),
-  //   changes: changes
-  // });
-  }
 
 }
 
