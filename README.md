@@ -1,3 +1,11 @@
+# Code Structure
+The project consest of 2 main components `AppComponent` and `HomeComponent`, and the components structure as the following<br/>
+1- `AppComponent`<br/>
+    &ensp; 2- `HomeComponent`<br/>
+       &emsp; * `HeaderComponent`<br/>
+       &emsp; * `UsersListComponent`<br/>
+    &ensp;3- `UserDetailsComponent`<br/>
+       
 # DynamicUserDashboardAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
