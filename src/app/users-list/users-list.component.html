@@ -1,16 +1,19 @@
 <div>
+  @if(!users() || users()?.length === 0){
+    <p>There no Users found in current Page !...</p>   
+  }
+</div>
+<div class="row">
         @for (user of users(); track user.id) {
-
+              <div class="column">
                 <div class="card" (click)="onSelectedUser(user)">
-                    <img [src]="user.avatar" alt="Avatar" style="width:25%">
+                    <img [src]="user.avatar" alt="Avatar"> 
                     <div class="container">
                       <h4><b>{{user.first_name}} {{user.last_name}}</b></h4>
                       <p>{{user.email}}</p>
                     </div>
-                  </div>
-        }
-        @if(!users() || users()?.length === 0){
-          <p>There no Users found in current Page !...</p>   
+                </div>
+             </div>
         }
 </div>
 
