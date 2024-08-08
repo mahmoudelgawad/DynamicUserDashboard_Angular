@@ -1,5 +1,6 @@
 import { Component, computed, input, OnChanges, OnInit, output, Signal, signal, SimpleChanges } from '@angular/core';
 import { User } from '../models/user-model';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -25,7 +26,7 @@ totalPagesRender = computed(() => {
   return items;
 });
 selectedPageNumber = signal<number>(1);
-constructor(){
+constructor(private router:Router){
 }
 
 ngOnInit(): void {
@@ -37,6 +38,10 @@ ngOnChanges(changes: SimpleChanges): void {
 onClickPageNumber(page:number){
  this.selectedPageNumber.set(page)
  this.onPageNumberSelected.emit(page);
+}
+
+onSelectedUser(user:User){
+    this.router.navigate(["user-details"],{queryParams:{id:user.id}});
 }
 
 }

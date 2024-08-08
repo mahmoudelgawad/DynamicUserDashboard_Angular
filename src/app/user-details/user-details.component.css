@@ -1,0 +1,53 @@
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.back {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  div.card.title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+    div.card button{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  div.card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  div.card.button:hover, div.card.a:hover {
+    opacity: 0.7;
+  }

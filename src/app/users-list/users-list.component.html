@@ -1,20 +1,17 @@
 <div>
-    <ul>
         @for (user of users(); track user.id) {
-            <li>
-                <div class="card">
+
+                <div class="card" (click)="onSelectedUser(user)">
                     <img [src]="user.avatar" alt="Avatar" style="width:25%">
                     <div class="container">
                       <h4><b>{{user.first_name}} {{user.last_name}}</b></h4>
                       <p>{{user.email}}</p>
                     </div>
                   </div>
-            </li>
         }
         @if(!users() || users()?.length === 0){
           <p>There no Users found in current Page !...</p>   
         }
-    </ul>
 </div>
 
 <div class="pagination">
